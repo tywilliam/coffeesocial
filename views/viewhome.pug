@@ -1,0 +1,40 @@
+extends layout
+
+block content
+    .container.center.row
+        .col-md-6.col-sm-5.col-xs-2.col-lg-3.center
+            h2 
+                .dropdown-menu
+                a.dropdown-item(href="#") #black
+                a.dropdown-item(href="#") #cappuccino
+                a.dropdown-item(href="#") #hazelnut
+                 a.dropdown-item(href="#") #nutcream
+
+        .col-lg-4.col-md-5.col-sm-3.col-xs-6.center
+           .card(style="width: 18rem;")
+            img.card-img-top(src="https://image.shutterstock.com/image-vector/hand-pushing-virtual-search-bar-450w-222220798.jpg" alt="Card image cap")
+            .card-body
+                p.card-text
+                a(href="/") @tywilliam
+                |    
+              
+                br 
+                | Some quick example text to build on the card title and make up the bulk of the card's content.
+                i 30 minutes ago.
+
+        .col-md-2.col-lg-3
+            form
+            h3 Post a coffee post.
+            .form-row
+                .custom-file
+                    input#validatedCustomFile.custom-file-input(type="file" required="")
+                    label.custom-file-label(for="validatedCustomFile") Choose file...
+                    .invalid-feedback Example invalid custom file feedback
+                .form-group
+                    label(for="exampleFormControlTextarea1") 
+                    textarea#exampleFormControlTextarea1.form-control(rows="3",placeholder="Coffee with heart shaped foam art")
+
+            button.btn.btn(type="submit") Submit
+
+
+                

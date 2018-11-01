@@ -32,6 +32,10 @@ dotenv.load({ path: '.env.example' });
  */
 const homeController = require('./controllers/home');
 const userController = require('./controllers/user');
+const followersController = require('./controllers/followers');
+const followingController = require('./controllers/following');
+const profileController = require('./controllers/profile');
+const postController = require('./controllers/post')
 const apiController = require('./controllers/api');
 const contactController = require('./controllers/contact');
 
@@ -126,6 +130,10 @@ app.use('/webfonts', express.static(path.join(__dirname, 'node_modules/@fortawes
  * Primary app routes.
  */
 app.get('/', homeController.index);
+app.get('/followers', followersController.followers);
+app.get('/following', followingController.following);
+app.post('/upload', postController.upload);
+app.get('/user',profileController.profile);
 app.get('/login', userController.getLogin);
 app.post('/login', userController.postLogin);
 app.get('/logout', userController.logout);
